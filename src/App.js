@@ -8,7 +8,7 @@ function App() {
       key: alanKey,
       onCommand: ({ command, articles }) => {
         if (command === "newHeadlines") {
-          alert("HI")
+          alert("Hi")
         }
       },
     })
