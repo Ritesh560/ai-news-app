@@ -6,6 +6,7 @@ export default makeStyles((theme) => ({
     backgroundSize: "cover",
     margin: 0,
     padding: 0,
+    paddingBottom: "10px",
   },
 
   footer: {
