@@ -10,6 +10,7 @@ const alanKey = "3ee4c7e8b857d6d8f57cc9d116c3c4952e956eca572e1d8b807a3e2338fdd0d
 function App() {
   const classes = useStyles()
   const [newsarticles, setNewsArticles] = useState([])
+  const [activeArticle, setActiveArticle] = useState(-1)
 
   useEffect(() => {
     alanBtn({
@@ -17,6 +18,9 @@ function App() {
       onCommand: ({ command, articles }) => {
         if (command === "newHeadlines") {
           setNewsArticles(articles)
+          setActiveArticle(-1)
+        } else if (command === "highlight") {
+          setActiveArticle((prev) => prev + 1)
         }
       },
     })
@@ -45,7 +49,7 @@ function App() {
         ) : null}
         <img src="https://www.the-next-tech.com/wp-content/uploads/2019/11/AI-2.jpg" className={classes.alanLogo} alt="logo" />
       </div>
-      <NewsCards articles={newsarticles} />
+      <NewsCards articles={newsarticles} activeArticle={activeArticle} />
     </div>
   )
 }
