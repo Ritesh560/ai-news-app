@@ -7,7 +7,9 @@ import wordsToNumbers from "words-to-numbers"
 import NewsCards from "./components/NewsCards/NewsCards"
 import useStyles from "./AppStyles"
 
+//alanKey from .env file
 const alanKey = process.env.REACT_APP_ALAN_KEY
+
 function App() {
   const classes = useStyles()
   const [newsarticles, setNewsArticles] = useState([])
@@ -27,9 +29,11 @@ function App() {
           const article = articles[parsedNumber - 1]
 
           if (parsedNumber > articles.length) {
-            console.log("try again")
+            alert("Please try that again...")
           } else if (article) {
             window.open(article.url, "_blank")
+          } else {
+            alert("Please try that again...")
           }
         }
       },
