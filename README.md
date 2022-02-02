@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+#AI-NEWS-APP
+This is a news website with features like voice search using AI for any kind of news around the world and weather information. I created this website using MATERIAL-UI, REACTJS and ALAN AI.
+LINK:[private](https://Ritesh//61fa67be6c4950054c15d620--goofy-mcnulty-28b96f.netlify.app/)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
