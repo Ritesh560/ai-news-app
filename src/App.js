@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react"
 import alanBtn from "@alan-ai/alan-sdk-web"
 import { Typography } from "@material-ui/core"
+import wordsToNumbers from "words-to-numbers"
 
 //components
 import NewsCards from "./components/NewsCards/NewsCards"
 import useStyles from "./AppStyles"
 
-const alanKey = "3ee4c7e8b857d6d8f57cc9d116c3c4952e956eca572e1d8b807a3e2338fdd0dc/stage"
+const alanKey = process.env.REACT_APP_ALAN_KEY
 function App() {
   const classes = useStyles()
   const [newsarticles, setNewsArticles] = useState([])
@@ -15,12 +16,21 @@ function App() {
   useEffect(() => {
     alanBtn({
       key: alanKey,
-      onCommand: ({ command, articles }) => {
+      onCommand: ({ command, articles, number }) => {
         if (command === "newHeadlines") {
           setNewsArticles(articles)
           setActiveArticle(-1)
         } else if (command === "highlight") {
           setActiveArticle((prev) => prev + 1)
+        } else if (command === "open") {
+          const parsedNumber = number.length > 2 ? wordsToNumbers(number, { fuzzy: true }) : number
+          const article = articles[parsedNumber - 1]
+
+          if (parsedNumber > articles.length) {
+            console.log("try again")
+          } else if (article) {
+            window.open(article.url, "_blank")
+          }
         }
       },
     })
