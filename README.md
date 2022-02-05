@@ -1,6 +1,6 @@
 ## AI-NEWS-APP
 
-This is a news website with features like voice search using AI for any kind of news around the world and weather information. I created this website using MATERIAL-UI, REACTJS and ALAN AI.
+This is a advnaced news website in which we can search for many catagoried in news like news by source, news on specific topic with only voice commands. we do not need to type for search, just speak to ALAN what you want. I created this website using MATERIAL-UI, REACTJS and ALAN AI.
 
 LINK:- [private](https://Ritesh//61fa67be6c4950054c15d620--goofy-mcnulty-28b96f.netlify.app/)
 
