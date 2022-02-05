@@ -7,8 +7,8 @@ import useStyles from "./styles.js"
 const infoCards = [
   { color: "Red", title: "Latest News", text: "Give me the latest news" },
   { color: "Green", title: "News by Categories", info: "Business, Entertainment, General, Health, Science, Sports, Technology", text: "Give me the latest Technology news" },
-  { color: "Blue", title: "News by Terms", info: "Bitcoin, PlayStation 5, Smartphones, Donald Trump...", text: "What's up with PlayStation 5" },
-  { color: "brown", title: "News by Sources", info: "CNN, Wired, BBC News, Time, IGN, Buzzfeed, ABC News...", text: "Give me the news from CNN" },
+  { color: "Blue", title: "News by Terms", info: "Bitcoin, PlayStation 5, Smartphones, Donald Trump...", text: "What's up with Bitcoin" },
+  { color: "brown", title: "News by Sources", info: "CNN, Wired, BBC News, Time, IGN, Buzzfeed, ABC News...", text: "Give me the news from ABC news" },
 ]
 
 function NewsCards({ articles, activeArticle }) {
