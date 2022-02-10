@@ -4,6 +4,10 @@ This is a advnaced news website in which we can search for many catagoried in ne
 
 LINK:- [private](https://Ritesh//61fa67be6c4950054c15d620--goofy-mcnulty-28b96f.netlify.app/)
 
+## files to add to run in localhost
+
+Add a .env file and put there a variable name REACT_APP_ALAN_KEY in which you specify your Alan Key.
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
